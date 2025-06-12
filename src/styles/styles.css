@@ -11,8 +11,8 @@ html{
 
 body {
     font-family: 'Poppins', sans-serif;
-
     background-color: rgb(223, 209, 130);
+    padding: 0 10px;
     overflow-x: hidden;
 }
 
@@ -101,6 +101,24 @@ main{
 }
 
 @media (max-width: 768px) {
+    #heading{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #headingText h1{
+        font-size: 60px;
+    }
+
+    #headingImage img{
+        height: 200px;
+        width: 200px;
+    }
+
+    .breed{
+        width: calc(50% - 20px);
+    }
+
     .nav-links {
         display: none;
         position: absolute;
@@ -297,4 +315,10 @@ footer{
     color: #666;
     padding: 2rem 1rem;
     border-top: 1px solid;
+}
+
+@media (max-width: 480px){
+    .breed{
+        width: 100%;
+    }
 }
