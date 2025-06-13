@@ -591,7 +591,7 @@
             modalImage.src = '';
         } 
 
-        modal.addEventListener('click', () => {
+        modal.addEventListener('click', (e) => {
             if(e.target === modal) {
                 closeModal();
             }
@@ -599,6 +599,16 @@
         hamburger.addEventListener('click', () => {
             navLinks.classList.toggle('active')
         });
+
+        document .addEventListener('click', (e) => {
+            if(e.target !== navLinks && e.target !== hamburger){
+                navLinks.classList.remove('active')
+            }
+        })
+
+        function closeHamburger(){
+            navLinks
+        }
 
         document.getElementById("copyright").innerHTML = "© " + new Date().getFullYear() + " Neo Genesis Garcia. Built for educational purposes";
 

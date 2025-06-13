@@ -321,6 +321,9 @@ footer{
     .breed{
         width: 100%;
     }
+    p {
+        margin: 0;
+    }
 }
 
 .modal{
