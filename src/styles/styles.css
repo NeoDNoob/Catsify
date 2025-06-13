@@ -356,6 +356,27 @@ footer{
 
 }
 
-modal img{
+.modal img{
     cursor: pointer;
+}
+
+.breed p{
+    cursor: pointer;
+}
+
+
+.modal-content{
+    background-color: #fff;
+    padding: 20px;
+    position: relative;
+    top: 370px;
+    left: 10px;
+    z-index: 9999;
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
+    left: 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
