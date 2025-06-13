@@ -132,13 +132,14 @@
                     Whether you want a cuddly lap cat or an active companion, there's a cat breed perfectly suited
                     to your lifestyle.</p>
             </div>
+            
             <div id="breedsImage">
                 <div>
                     <h3 id="startingList">Here are the known breeds of cats:</h3>
                     <h4>Note: some cat breeds are not included due to lack of information</h4>
                 </div>
                 <div id="breedsList">
-                    <div class="breed">
+                    <div class="breed">      
                         <img src="assets/abyssnian.jpg" alt=" abyssnian cat photo">
                         <p>Abyssinian</p>
                     </div>
@@ -416,6 +417,10 @@
                     </div>
                 </div>
             </div>
+            <div id="imageModal" class="modal">
+  <span class="close" onclick="closeModal()">&times;</span>
+  <img id="modalImage" src="" alt="Full Preview">
+</div>
         </section>
         <section>
             <div id="personalities">
@@ -568,7 +573,29 @@
     <script>
         const hamburger = document.getElementById('hamburger');
         const navLinks = document.getElementById('nav-links');
+        const modal = document.getElementById('imageModal');
+        const modalImage = document.getElementById('modalImage');
+        const modalClose = document.getElementById('.close');
 
+        const breedImages = document.querySelectorAll('.breed img');
+
+        breedImages.forEach(img => {
+            img.addEventListener('click', () => {
+                modalImage.src = img.src;
+                modal.style.display = 'flex';
+            });
+        });
+
+        function closeModal() {
+            modal.style.display = 'none';
+            modalImage.src = '';
+        } 
+
+        modal.addEventListener('click', () => {
+            if(e.target === modal) {
+                closeModal();
+            }
+        })
         hamburger.addEventListener('click', () => {
             navLinks.classList.toggle('active')
         });
