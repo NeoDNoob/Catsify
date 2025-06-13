@@ -1,3 +1,4 @@
+// Grab DOM elements
 const hamburger = document.getElementById('hamburger');
 const navLinks = document.getElementById('nav-links');
 const modal = document.getElementById('imageModal');
@@ -5,7 +6,7 @@ const modalImage = document.getElementById('modalImage');
 const modalClose = document.querySelector('.close');
 const breedImages = document.querySelectorAll('.breed img');
 
-
+// Function to open the modal with breed title and description
 function openDescriptionModal(breed) {
     const modal = document.getElementById("descriptionModal");
     const title = document.getElementById("modalTitle");
@@ -16,48 +17,49 @@ function openDescriptionModal(breed) {
     modal.style.display = "block";
 }
 
-function closeDescriptionModal() {
-    const modal = document.getElementById("descriptionModal");
-    modal.style.display = "none";
-}
-
-window.onclick = function (event) {
-    const descModal = document.getElementById("descriptionModal");
-    if (event.target == descModal) {
-        descModal.style.display = "none";
-    }
-};
-
+// Add click event listener to each breed image
 breedImages.forEach(img => {
     img.addEventListener('click', () => {
+        const modalTitle = document.getElementById("modalTitle");
+        const modalDescription = document.getElementById("modalDescription");
+        const breedName = img.nextElementSibling?.innerHTML;
+
+        // Set modal image and text
         modalImage.src = img.src;
+        modalTitle.innerText = breedName;
+        modalDescription.innerText = breedDescriptions[breedName] || "No description available.";
+
+        // Show modal
         modal.style.display = 'flex';
     });
 });
 
+// Function to close the modal
 function closeModal() {
     modal.style.display = 'none';
-    modalImage.src = '';
+    modalImage.src = ''; // Clear image source
 }
 
+// Close modal if clicked outside of the content
 modal.addEventListener('click', (e) => {
     if (e.target === modal) {
         closeModal();
     }
 });
 
+// Toggle hamburger menu on click
 hamburger.addEventListener('click', () => {
     navLinks.classList.toggle('active');
 });
 
+// Close hamburger menu if clicking anywhere outside of it
 document.addEventListener('click', (e) => {
     if (e.target !== navLinks && e.target !== hamburger) {
         navLinks.classList.remove('active');
     }
 });
 
-function closeHamburger() {
-    navLinks.classList.remove('active');
-}
 
-document.getElementById("copyright").innerHTML = "© " + new Date().getFullYear() + " Neo Genesis Garcia. Built for educational purposes";
+// Set current year dynamically for copyright
+document.getElementById("copyright").innerHTML =
+    "© " + new Date().getFullYear() + " Neo Genesis Garcia. Built for educational purposes";
