@@ -71,4 +71,5 @@ const link = {
     "Turkish Angora" : "https://en.wikipedia.org/wiki/Turkish_Angora",
     "Turkish Van" : "https://en.wikipedia.org/wiki/Turkish_Van",
     "Ukrainian Levkoy" : "https://en.wikipedia.org/wiki/Ukrainian_Levkoy",
+
 }

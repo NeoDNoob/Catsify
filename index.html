@@ -16,7 +16,9 @@
 
 <body>
     <header>
+        <a href="#" id="logo-link">
         <div class="logo"><img src="assets/pawLogo.png" alt="logo">Catsify</div>
+        </a>
         <nav class="nav-links" id="nav-links">
             <ul>
                 <li> <a href="#home">Home</a></li>
@@ -26,14 +28,12 @@
             </ul>
         </nav>
         <!-- Hamburger menu only accessible in mobile view-->
-        <div class="hamburger" id="hamburger">
+        <button class="hamburger" id="hamburger">
             &#9776;
-        </div>
+        </button>
     </header>
-    <main>
-        <!-- Home section -->
-        <section id="home">
-            <div id="heading">
+    <section id="intro">
+          <div id="heading">
                 <div id="headingText">
                     <h1>
                         Cats
@@ -44,6 +44,10 @@
                 </div>
             </div>
             <div>
+    </section>
+    <main>
+        <!-- Home section -->
+        <section id="home">
                 <h3>What are they?</h3>
                 <p>
                     <em><b>Cats</b></em>
@@ -135,7 +139,7 @@
                 </div>
                 <div id="breedsList">
                     <div class="breed">
-                        <img src="assets/abyssnian.jpg" alt=" abyssnian cat photo">
+                        <img src="assets/abyssnian.jpg"  alt=" abyssnian cat photo">
                         <p class="breed-name">Abyssinian</p>
                     </div>
                     <div class="breed">
@@ -576,15 +580,37 @@
                     All images and information presented here have been gathered from publicly available sources across
                     the internet. This content is intended for educational and non-commercial purposes only, and full
                     credit goes to the original authors and photographers. If you are the rightful owner of any content
-                    used and wish to have it credited or removed, please feel free to reach out.
+                    used and wish to have it credited or removed, please feel free to reach out. 
                 </p>
+                <div>
+                    <p>Got any breed you want to add?</p>
+                    <h1 id="contactText">Contact me</h1>
+                </div>
             </div>
+                <div id="contact">
+                    <form 
+                        class="contactWrapper",
+                        action="https://formspree.io/f/mblyykpz"
+                        method="POST">
+
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required">
+
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" required></textarea>
+
+                        <button id="send">Send Email</button>
+                     </form>
+                </div>
         </section>
 
     </main>
 
     <footer>
-        <p id="copyright">© 2025 Neo Genesis Garcia. Built for educational purposes</p>
+        <p id="copyright">© 2025 Neo Genesis Garcia. Personal project</p>
         <p>All icons, images, and info belong to their respective owners.</p>
         <p>Made with HTML, CSS & JavaScript.</p>
     </footer>

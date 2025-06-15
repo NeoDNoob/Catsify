@@ -5,7 +5,7 @@ const modal = document.getElementById('imageModal');
 const modalImage = document.getElementById('modalImage');
 const modalClose = document.querySelector('.close');
 const breedImages = document.querySelectorAll('.breed img');
-
+const form  = document.getElementById('contact')
 
 // Add click event listener to each breed image
 breedImages.forEach(img => {
@@ -45,14 +45,28 @@ modal.addEventListener('click', (e) => {
 // Toggle hamburger menu on click
 hamburger.addEventListener('click', () => {
     navLinks.classList.toggle('active');
+    hamburger.classList.toggle('active');
+
+
+ hamburger.innerHTML = navLinks.classList.contains('active') && hamburger.classList.contains('active') ? '&#10006;' : '&#9776;';   
 });
 
 // Close hamburger menu if clicking anywhere outside of it
 document.addEventListener('click', (e) => {
     if (e.target !== navLinks && e.target !== hamburger) {
         navLinks.classList.remove('active');
+        hamburger.innerHTML = '&#9776;';
     }
 });
+
+contact.addEventListener('submit',(e) =>{
+    const email = document.getElementById('email').value;
+
+    if(!email || !email.includes('@') || !email.includes('.')){
+        alert('Please enter a valid email address');
+        e.preventDefault();
+    }
+})
 
 
 // Set current year dynamically for copyright
