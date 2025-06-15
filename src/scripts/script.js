@@ -6,16 +6,6 @@ const modalImage = document.getElementById('modalImage');
 const modalClose = document.querySelector('.close');
 const breedImages = document.querySelectorAll('.breed img');
 
-// Function to open the modal with breed title and description
-function openDescriptionModal(breed) {
-    const modal = document.getElementById("descriptionModal");
-    const title = document.getElementById("modalTitle");
-    const desc = document.getElementById("modalDescription");
-
-    title.innerText = breed;
-    desc.innerText = breedDescriptions[breed] || "No description available.";
-    modal.style.display = "block";
-}
 
 // Add click event listener to each breed image
 breedImages.forEach(img => {
@@ -23,11 +13,16 @@ breedImages.forEach(img => {
         const modalTitle = document.getElementById("modalTitle");
         const modalDescription = document.getElementById("modalDescription");
         const breedName = img.nextElementSibling?.innerHTML;
+        const linkElement = document.createElement("a");
+       
 
         // Set modal image and text
         modalImage.src = img.src;
         modalTitle.innerText = breedName;
         modalDescription.innerText = breedDescriptions[breedName] || "No description available.";
+        linkElement.href = link[breedName] 
+        linkElement.textContent = breedName + " Cat Wiki"; 
+        modalDescription.appendChild(linkElement);
 
         // Show modal
         modal.style.display = 'flex';
