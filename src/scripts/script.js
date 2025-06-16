@@ -59,15 +59,6 @@ document.addEventListener('click', (e) => {
     }
 });
 
-contact.addEventListener('submit',(e) =>{
-    const email = document.getElementById('email').value;
-
-    if(!email || !email.includes('@') || !email.includes('.')){
-        alert('Please enter a valid email address');
-        e.preventDefault();
-    }
-})
-
 
 // Set current year dynamically for copyright
 document.getElementById("copyright").innerHTML =

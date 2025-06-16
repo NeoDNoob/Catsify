@@ -330,6 +330,18 @@ main {
   cursor: pointer;
 }
 
+#meow{
+ display: flex;
+ flex-direction: column;
+ gap: 10px;
+ font-size: 10px;
+ align-items: center;
+ justify-content: center;
+ margin-top: 50px;
+}
+
+
+
 /* ===== FOOTER ===== */
 footer {
   text-align: center;
