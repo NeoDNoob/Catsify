@@ -46,8 +46,6 @@ modal.addEventListener('click', (e) => {
 hamburger.addEventListener('click', () => {
     navLinks.classList.toggle('active');
     hamburger.classList.toggle('active');
-
-
  hamburger.innerHTML = navLinks.classList.contains('active') && hamburger.classList.contains('active') ? '&#10006;' : '&#9776;';   
 });
 
@@ -62,4 +60,4 @@ document.addEventListener('click', (e) => {
 
 // Set current year dynamically for copyright
 document.getElementById("copyright").innerHTML =
-    "© " + new Date().getFullYear() + " Neo Genesis Garcia. Built for educational purposes";
+    "© " + new Date().getFullYear();
