@@ -1,4 +1,6 @@
 /* ===== RESET & GLOBAL STYLES ===== */
+
+
 * {
   margin: 0;
   padding: 0;
@@ -69,7 +71,18 @@ nav ul li a:hover {
 }
 
 
-.hamburger {
+
+nav ul li.active a {
+  color: #ffff;
+  background-color:#bd9513;
+  padding: 5px;
+  border-radius: 5px;
+  transition: transform 0.3s ease-in-out;
+}
+
+
+
+.hamburger {  
   display: none;
   font-size: 30px;
 }
@@ -143,12 +156,6 @@ main {
   padding: 20px;
 }
 
-#intro {
-  padding: 50px 30px;
-  scroll-margin-top: 50px;
-  background-image: url('/assets/intro.jpg');
-}
-
 
 #heading {
   display: flex;
@@ -156,13 +163,15 @@ main {
   align-items: center;
   padding: 20px;
   gap: 20px;
+  background-image: url('/assets/intro.jpg');
+  margin-bottom: 50px;
 }
 
 #headingText h1 {
   font-size: 100px;
   font-weight: bold;
   color: #fffb00;
-
+  font-family: Slackey, serif;
 }
 
 #headingImage img {
@@ -174,18 +183,36 @@ main {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgb(223, 209, 130);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #bd9513;
+  border-radius: 5px;
+}
 /* ===== SECTIONS: Home / Breeds / Personalities / About ===== */
 #home,
 #breeds,
-#personality,
-#about {
-  padding: 50px 30px;
-  scroll-margin-top: 50px;
+#personalities {
+  padding: 20px, 0;
+  scroll-margin-top: 70px;
+  margin-bottom: 100px ;
+  min-height: 100vh;
 }
 
-#home {
-  scroll-margin-top: 100px;
+#about{
+  padding: 20px 0;
+  margin-top: 100px;
+  scroll-margin-top: 70px;
+  min-height: 100vh;
 }
+ 
 
 #home h3,
 #breeds h3,
@@ -195,7 +222,6 @@ main {
   font-size: 25px;
   font-weight: bold;
 }
-
 
 
 #home p,
@@ -208,10 +234,16 @@ main {
   margin-top: 20px;
   font-size: 20px;
   color: #333;
-  font-family: Poppins, sans-serif;
+  font-family: Poppins, serif;
 }
 
+#personalitiesList ol{
+  padding-left: 25px;}
 
+#personalitiesList ul{
+  padding-left: 30px;
+  margin-top: 0;
+}
 
 #breedsList {
   display: grid;
@@ -279,7 +311,7 @@ main {
   flex-direction: column;
   gap: 1rem;
   text-align: left;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Poppins', serif;
   position: relative;
   max-height: 80vh;
   overflow-y: auto;
@@ -317,7 +349,7 @@ main {
   color: #333;
 }
 
-#nodalDescriptionP {
+#modalDescription {
   font-size: 16px;
   color: #555;
   line-height: 1.5;
@@ -357,6 +389,10 @@ footer {
 /* ===== RESPONSIVE DESIGN ===== */
 @media (max-width: 768px) {
 
+  header{
+    height: 55px;
+  }
+
   body{
     padding: 0 5px;
   }
@@ -368,7 +404,7 @@ footer {
 
   #headingText h1 {
     font-size: 60px;
-    border-radius: 100%;
+    font-family: Slackey, serif;
   }
 
   #headingImage img {
@@ -429,6 +465,10 @@ footer {
 
 @media (max-width: 480px) {
 
+  header {
+   height: 55px;
+  }
+
   body{
     padding: 0 2px;
   }
@@ -446,6 +486,7 @@ footer {
 
 #headingText h1 {
   font-size: 80px;
+  font-family: Slackey, sans-serif;
 }
 
  .contactWrapper{

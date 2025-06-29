@@ -1,4 +1,4 @@
-<!---- Author: Neo Genesis Garcia-->    
+<!---- Author: Neo Genesis Garcia-->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="/src/styles/styles.css">
     <link rel="shortcut icon" href="assets/paw.svg" type="image/x-icon">
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Slackey&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
     </style>
     <title>Catsify</title>
@@ -17,14 +18,14 @@
 <body>
     <header>
         <a href="#" id="logo-link">
-        <div class="logo"><img src="assets/pawLogo.png" alt="logo">Catsify</div>
+            <div class="logo"><img src="assets/pawLogo.png" alt="logo">Catsify</div>
         </a>
         <nav class="nav-links" id="nav-links">
             <ul>
-                <li> <a href="#home">Home</a></li>
-                <li> <a href="#breeds">Breeds</a></li>
-                <li> <a href="#personalities">Personalities</a></li>
-                <li> <a href="#about">About</a></li>
+                <li class="home active"> <a href="#home">Home</a></li>
+                <li class="breeds"> <a href="#breeds">Breeds</a></li>
+                <li class="personalities"> <a href="#personalities">Personalities</a></li>
+                <li class="about"> <a href="#about">About</a></li>
             </ul>
         </nav>
         <!-- Hamburger menu only accessible in mobile view-->
@@ -32,24 +33,20 @@
             &#9776;
         </button>
     </header>
-    <section id="intro">
-          <div id="heading">
-                <div id="headingText">
-                    <h1>
-                        Cats
-                    </h1>
-                </div>
-                <div id="headingImage">
-                    <img src="assets/cat2.jpg" alt="cat photo">
-                </div>
-            </div>
-            <div>
-    </section>
     <main>
         <!-- Home section -->
         <section id="home">
             <div>
-
+                <div id="heading">
+                    <div id="headingText">
+                        <h1>
+                            Cats
+                        </h1>
+                    </div>
+                    <div id="headingImage">
+                        <img src="assets/cat2.jpg" alt="cat photo">
+                    </div>
+                </div>
                 <h3>What are they?</h3>
                 <p>
                     <em><b>Cats</b></em>
@@ -79,7 +76,7 @@
                     Biologically,
                     <b> cats are highly adapted predators</b>. They possess
                     <em>sharp retractable claws</em> ,
-                    <em>ight vision </em>, and
+                    <em>night vision </em>, and
                     <em>highly sensitive whiskers</em> t
                     hat detect even the slightest change in air movement. Their flexible
                     bodies and powerful legs allow them to leap great distances and land
@@ -115,11 +112,13 @@
                 <p>
                     Overall, cats are complex and intelligent animals that combine elegance, instinct, and
                     adaptability—traits that have
-                    allowed them to remain both mysterious and beloved for millennia. (Tip: Click the button below for magic)
-                </p>       
+                    allowed them to remain both mysterious and beloved for millennia. (Tip: Click the button below for
+                    magic)
+                </p>
             </div>
             <div id="meow">
-                <iframe width="100" height="100" src="https://www.myinstants.com/instant/secondary-meow-35961/embed/" frameborder="0" scrolling="no"></iframe>
+                <iframe width="100" height="100" src="https://www.myinstants.com/instant/secondary-meow-35961/embed/"
+                    frameborder="0" scrolling="no"></iframe>
             </div>
         </section>
 
@@ -139,17 +138,17 @@
             </div>
             <div id="breedsImage">
                 <div>
-        
+
                     <h4 id="startingList">NOTE: Some cat breeds are not included due to lack of information</h4>
                 </div>
                 <div id="breedsList">
                     <div class="breed">
-                        <img src="assets/abyssnian.jpg"  alt=" abyssnian cat photo">
+                        <img src="assets/abyssnian.jpg" alt=" abyssnian cat photo">
                         <p class="breed-name">Abyssinian</p>
                     </div>
                     <div class="breed">
                         <img src="assets/american-bobtail.jpg" alt=" american bobtail cat photo">
-                        <p class="breed-name" )>American Bobtail</p>
+                        <p class="breed-name")>American Bobtail</p>
                     </div>
                     <div class="breed">
                         <img src="assets/american-curl.jpg" alt="american curl cat photo">
@@ -233,7 +232,7 @@
                     </div>
                     <div class="breed">
                         <img src="assets/el gato.webp" alt="el gato cat photo">
-                        <p>El Gato</p>
+                        <p class="breed-name">El Gato</p>
                     </div>
                     <div class="breed">
                         <img src="assets/european burmese.jpg" alt="european burmese cat photo">
@@ -297,7 +296,7 @@
                     </div>
                     <div class="breed">
                         <img src="assets/minuet-napoleon.jpg" alt="minuet-napoleon cat photo">
-                        <p class="breed-name" data-breed="Minuet/Napoleon">Minuet/Napoleon</p>
+                        <p class="breed-name">Minuet/Napoleon</p>
                     </div>
                     <div class="breed">
                         <img src="assets/cat-monday-left-me-broken-cat.png" alt="cat-monday-left-me-broken-cat photo">
@@ -345,7 +344,7 @@
                     </div>
                     <div class="breed">
                         <img src="assets/polite cat.jpg" alt="polite cat photo">
-                        <p>Polite Cat</p>
+                        <p class="breed-name">Polite Cat</p>
                     </div>
                     <div class="breed">
                         <img src="assets/ragamuffin.jpg" alt="ragamuffin cat photo">
@@ -444,7 +443,6 @@
                         <p id="modalDescription"></p>
                     </div>
                 </div>
-            </div>
             </div>
         </section>
 
@@ -585,38 +583,36 @@
                     All images and information presented here have been gathered from publicly available sources across
                     the internet. This content is intended for educational and non-commercial purposes only, and full
                     credit goes to the original authors and photographers. If you are the rightful owner of any content
-                    used and wish to have it credited or removed, please feel free to reach out. 
+                    used and wish to have it credited or removed, please feel free to reach out.
                 </p>
                 <div>
                     <p>Got any breed you want to add?</p>
                     <h1 id="contactText">Contact me:</h1>
                 </div>
             </div>
-                <div id="contact">
-                    <form 
-                        class="contactWrapper",
-                        action="https://formspree.io/f/mblyykpz"
-                        method="POST">
+            <div id="contact">
+                <form class="contactWrapper" action="https://formspree.io/f/mblyykpz" method="POST">
 
-                        <label for="name">Name</label>
-                        <input type="text" id="name" name="name" required">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
 
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" required>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
 
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message" required></textarea>
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" required></textarea>
 
-                        <button id="send">Send Email</button>
-                     </form>
-                </div>
+                    <button id="send">Send Email</button>
+                </form>
+            </div>
         </section>
 
     </main>
 
     <footer>
         <p id="copyright"> </p>
-        <p> Created by <a id="fbLink" href="https://www.facebook.com/neoriiii/" target="_blank" title="Facebook Profile">Neo Genesis Garcia </a></p>
+        <p> Created by <a id="fbLink" href="https://www.facebook.com/neoriiii/" target="_blank"
+                title="Facebook Profile">Neo Genesis Garcia </a></p>
         <p>All icons, images, and info belong to their respective owners.</p>
         <p>Made with HTML, CSS & JavaScript.</p>
     </footer>
