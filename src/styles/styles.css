@@ -1,6 +1,4 @@
 /* ===== RESET & GLOBAL STYLES ===== */
-
-
 * {
   margin: 0;
   padding: 0;
@@ -22,7 +20,7 @@ body {
 header {
   position: sticky;
   top: 0;
-  background-color: rgb(223, 209, 130);
+  background-color: #dfd182;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -44,7 +42,7 @@ header {
   height: 30px;
 }
 
-#fbLink{
+#fbLink {
   text-decoration: none;
   color: #333;
 }
@@ -67,22 +65,21 @@ nav ul li a {
 
 nav ul li a:hover {
   color: #bd9513;
-  font-style: italic;
 }
 
 
 
 nav ul li.active a {
   color: #ffff;
-  background-color:#bd9513;
+  background-color: #bd9513;
   padding: 5px;
   border-radius: 5px;
-  transition: transform 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 
 
-.hamburger {  
+.hamburger {
   display: none;
   font-size: 30px;
 }
@@ -92,32 +89,32 @@ nav ul li.active a {
   color: #333;
 }
 
-#contactText{
+#contactText {
   margin: 20px 0 20px 0;
 }
 
 
-#contact{ 
+#contact {
   display: flex;
-  flex-direction: column ;
+  flex-direction: column;
   align-items: center;
 
 }
 
-.contactWrapper{
+.contactWrapper {
   width: 60%;
   display: flex;
   flex-direction: column;
 
 }
 
-.contactWrapper label{
+.contactWrapper label {
   margin: 10px 0 0 0;
   font-size: 20px;
   font-weight: bold;
 }
 
-.contactWrapper input{
+.contactWrapper input {
   margin: 10px 0 10px 0;
   padding: 10px;
   border-radius: 10px;
@@ -125,7 +122,13 @@ nav ul li.active a {
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-.contactWrapper textarea{
+.contactWrapper input:focus {
+  outline: #bd9513;
+  border: 2px solid #bd9513;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.contactWrapper textarea {
   margin: 10px 0 10px 0;
   padding: 10px;
   border-radius: 10px;
@@ -134,7 +137,14 @@ nav ul li.active a {
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-.contactWrapper button{
+.contactWrapper textarea:focus {
+  outline: #bd9513;
+  border: 2px solid #bd9513;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  transition: ease-in-out 0.3s;
+}
+
+.contactWrapper button {
   margin: 10px 0 10px 0;
   padding: 10px;
   border-radius: 10px;
@@ -147,9 +157,12 @@ nav ul li.active a {
   cursor: pointer;
 }
 
-.contactWrapper button:hover{
+
+.contactWrapper button:hover {
   background-color: #666;
+  transition: ease-in-out 0.3s;
 }
+
 
 /* ===== MAIN SECTIONS ===== */
 main {
@@ -174,15 +187,45 @@ main {
   font-family: Slackey, serif;
 }
 
+#headingText h1:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+#headingImage {
+  position: relative;
+  display: inline-block;
+}
+
+#headingImage::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  border-radius: 50%;
+  background: #dfd182;
+  filter: blur(12px);
+  z-index: 0;
+}
+
 #headingImage img {
+  position: relative;
   height: 300px;
   width: 300px;
   object-fit: cover;
   border-radius: 50%;
-  border: 5px solid #ddd;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border: 5px solid #dfd182;
+  z-index: 1;
 }
 
+
+#headingImage img:hover {
+  transform: scale(1.1);
+  transition: all 0.5s ease-in-out;
+}
 
 ::-webkit-scrollbar {
   width: 10px;
@@ -196,27 +239,28 @@ main {
   background-color: #bd9513;
   border-radius: 5px;
 }
+
 /* ===== SECTIONS: Home / Breeds / Personalities / About ===== */
 #home,
 #breeds,
 #personalities {
   padding: 20px, 0;
   scroll-margin-top: 70px;
-  margin-bottom: 100px ;
+  margin-bottom: 100px;
   min-height: 100vh;
 }
 
-#about{
+#about {
   padding: 20px 0;
   margin-top: 100px;
   scroll-margin-top: 70px;
   min-height: 100vh;
 }
- 
+
 
 #home h3,
 #breeds h3,
-#personality h1 ,
+#personality h1,
 #startingList,
 #about h1 {
   font-size: 25px;
@@ -237,10 +281,11 @@ main {
   font-family: Poppins, serif;
 }
 
-#personalitiesList ol{
-  padding-left: 25px;}
+#personalitiesList ol {
+  padding-left: 25px;
+}
 
-#personalitiesList ul{
+#personalitiesList ul {
   padding-left: 30px;
   margin-top: 0;
 }
@@ -281,8 +326,8 @@ main {
   padding-left: 20px;
 }
 
-.list h4{
-    padding-top: 20px;
+.list h4 {
+  padding-top: 20px;
 }
 
 /* ===== MODAL STYLES ===== */
@@ -365,14 +410,14 @@ main {
   cursor: pointer;
 }
 
-#meow{
- display: flex;
- flex-direction: column;
- gap: 10px;
- font-size: 10px;
- align-items: center;
- justify-content: center;
- margin-top: 50px;
+#meow {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 10px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
 }
 
 
@@ -389,11 +434,11 @@ footer {
 /* ===== RESPONSIVE DESIGN ===== */
 @media (max-width: 768px) {
 
-  header{
+  header {
     height: 55px;
   }
 
-  body{
+  body {
     padding: 0 5px;
   }
 
@@ -411,7 +456,7 @@ footer {
     height: 200px;
     width: 200px;
   }
-  
+
   .breed {
     width: 100%;
   }
@@ -428,7 +473,7 @@ footer {
     height: 200px;
     border-radius: 8px;
   }
-  
+
 
   .nav-links ul {
     flex-direction: column;
@@ -458,7 +503,7 @@ footer {
     width: 100%;
   }
 
-  .contactWrapper{
+  .contactWrapper {
     width: 100%;
   }
 }
@@ -466,30 +511,31 @@ footer {
 @media (max-width: 480px) {
 
   header {
-   height: 55px;
+    height: 55px;
   }
 
-  body{
+  body {
     padding: 0 2px;
   }
-  
+
   .breed {
     width: 100%;
   }
-#intro,
-#home,
-#breeds,
-#personalities,
-#about {
-  padding: 20px 10px;
-}
 
-#headingText h1 {
-  font-size: 80px;
-  font-family: Slackey, sans-serif;
-}
+  #intro,
+  #home,
+  #breeds,
+  #personalities,
+  #about {
+    padding: 20px 10px;
+  }
 
- .contactWrapper{
+  #headingText h1 {
+    font-size: 80px;
+    font-family: Slackey, sans-serif;
+  }
+
+  .contactWrapper {
     width: 100%;
   }
 
