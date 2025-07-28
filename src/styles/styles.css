@@ -228,7 +228,7 @@ main {
 }
 
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 5px;
 }
 
 ::-webkit-scrollbar-track {
@@ -237,7 +237,7 @@ main {
 
 ::-webkit-scrollbar-thumb {
   background-color: #bd9513;
-  border-radius: 5px;
+  border-radius: 10px;
 }
 
 /* ===== SECTIONS: Home / Breeds / Personalities / About ===== */
