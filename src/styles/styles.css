@@ -332,7 +332,10 @@ main {
 
 /* ===== MODAL STYLES ===== */
 .modal {
-  display: none;
+  display: flex;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.2s ease;
   position: fixed;
   z-index: 9999;
   left: 0;
@@ -344,6 +347,15 @@ main {
   align-items: flex-start;
   justify-content: center;
   overflow: auto;
+}
+
+.modal.show{
+  visibility: visible;
+  opacity: 1;
+}
+.modal.show .modal-content {
+  transform: scale(1);
+  opacity: 1;
 }
 
 .modal-content {
@@ -360,6 +372,9 @@ main {
   position: relative;
   max-height: 80vh;
   overflow-y: auto;
+  transform: scale(0.5);
+  opacity: 0;
+  transition: transform 0.2s ease, opacity 0.2s ease
 }
 
 .modal-image-container {
@@ -385,6 +400,11 @@ main {
   border-radius: 10px;
   margin-bottom: 20px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+#modalImage:hover {
+  transform: scale(1.05);
+  transition: all 0.5s ease-in-out;
 }
 
 #modalTitle {
@@ -418,6 +438,11 @@ main {
   align-items: center;
   justify-content: center;
   margin-top: 50px;
+}
+
+#meow:hover {
+  transform: scale(1.05);
+  transition: all 0.5s ease-in-out;
 }
 
 

@@ -67,13 +67,13 @@ breedImages.forEach(img => {
         modalDescription.appendChild(linkElement);
 
         // Show modal
-        modal.style.display = 'flex';
+        modal.classList.add('show');
     });
 });
 
 // Function to close the modal
 function closeModal() {
-    modal.style.display = 'none';
+    modal.classList.remove('show');
     modalImage.src = ''; // Clear image source
 }
 
