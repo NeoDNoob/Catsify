@@ -3,12 +3,14 @@ const hamburger = document.getElementById('hamburger');
 const navLinks = document.getElementById('nav-links');
 const modal = document.getElementById('imageModal');
 const modalImage = document.getElementById('modalImage');
-const modalClose = document.querySelector('.close');
 const breedImages = document.querySelectorAll('.breed img');
 const sections = document.querySelectorAll('section');
 const navLi = document.querySelectorAll('nav ul li');
 const button = document.querySelector('.contactWrapper button');
 const contactForm = document.querySelectorAll('.contactWrapper input , .contactWrapper textarea');
+
+
+// Add scroll event listener for smooth scrolling
 window.addEventListener('scroll', () => {
     let current = '';
 
@@ -21,9 +23,10 @@ window.addEventListener('scroll', () => {
 
     });
 
+    // Remove active class from all nav links
     navLi.forEach(link => {
         link.classList.remove('active');
-
+    // Add active class to the current nav link
         const anchor = link.querySelector('a');
         if (anchor && anchor.getAttribute('href') === `#${current}`) {
             link.classList.add('active');
